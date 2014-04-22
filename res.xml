@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+    <components class="array">
+        <arrayElement class="object">
+            <active type="boolean">true</active>
+            <cleanupCountToKeep type="number">0</cleanupCountToKeep>
+            <cleanupDaysToKeep type="number">0</cleanupDaysToKeep>
+            <configTemplates class="array">
+                <arrayElement class="object">
+                    <active type="boolean">true</active>
+                    <data type="string">asdasdas
+                        d
+                        asd
+                        as
+                        d
+                        asd
+                        as
+                        d
+                    </data>
+                    <name type="string">configuration template</name>
+                </arrayElement>
+            </configTemplates>
+            <created type="number">1396624848467</created>
+            <defaultVersionType type="string">FULL</defaultVersionType>
+            <deleted type="boolean">false</deleted>
+            <entityType type="string">Component</entityType>
+            <envPropDefs class="array"/>
+            <importAutomatically type="boolean">false</importAutomatically>
+            <name type="string">c1</name>
+            <processes class="array">
+                <arrayElement class="object">
+                    <active type="boolean">true</active>
+                    <configActionType type="string">ADD</configActionType>
+                    <defaultWorkingDir type="string">${p:resource/work.dir}/${p:component.name}</defaultWorkingDir>
+                    <deleted type="boolean">false</deleted>
+                    <description type="string"/>
+                    <name type="string">deploy config</name>
+                    <propDefs class="array"/>
+                    <rootActivity class="object">
+                        <children class="array">
+                            <arrayElement class="object">
+                                <children class="array"/>
+                                <name type="string">98e424df5140c0cdb95548e01efc46</name>
+                                <type type="string">finish</type>
+                            </arrayElement>
+                        </children>
+                        <edges class="array">
+                            <arrayElement class="object">
+                                <to type="string">98e424df5140c0cdb95548e01efc46</to>
+                                <type type="string">ALWAYS</type>
+                                <value type="string"/>
+                            </arrayElement>
+                        </edges>
+                        <name type="string">04c84ce9-13c0-4fc6-acf9-af64b4ebd647</name>
+                        <offsets class="array">
+                            <arrayElement class="object">
+                                <name type="string">98e424df5140c0cdb95548e01efc46</name>
+                                <x type="number">0</x>
+                                <y type="number">420</y>
+                            </arrayElement>
+                        </offsets>
+                        <sizes class="array">
+                            <arrayElement class="object">
+                                <height type="number">50</height>
+                                <name type="string">98e424df5140c0cdb95548e01efc46</name>
+                                <width type="number">80</width>
+                            </arrayElement>
+                        </sizes>
+                        <type type="string">graph</type>
+                    </rootActivity>
+                    <status type="string"/>
+                    <takesVersion type="boolean">false</takesVersion>
+                </arrayElement>
+                <arrayElement class="object">
+                    <active type="boolean">true</active>
+                    <configActionType type="string">ADD</configActionType>
+                    <defaultWorkingDir type="string">${p:resource/work.dir}/${p:component.name}</defaultWorkingDir>
+                    <deleted type="boolean">false</deleted>
+                    <description type="string"/>
+                    <inventoryActionType type="string">ADD</inventoryActionType>
+                    <name type="string">download</name>
+                    <propDefs class="array"/>
+                    <rootActivity class="object">
+                        <children class="array">
+                            <arrayElement class="object">
+                                <children class="array"/>
+                                <name type="string">809a9b6700320565f5b2aefc6dcc26</name>
+                                <type type="string">finish</type>
+                            </arrayElement>
+                            <arrayElement class="object">
+                                <allowFailure type="boolean">false</allowFailure>
+                                <children class="array"/>
+                                <commandName type="string">Download Artifacts</commandName>
+                                <impersonationUseSsh type="boolean">false</impersonationUseSsh>
+                                <impersonationUseSudo type="boolean">false</impersonationUseSudo>
+                                <name type="string">Download Artifacts</name>
+                                <pluginName type="string">Serena RA Versioned File Storage</pluginName>
+                                <pluginVersion type="number">16</pluginVersion>
+                                <properties class="object">
+                                    <compId type="string">${p:component.id}</compId>
+                                    <directoryOffset type="string">.</directoryOffset>
+                                    <fileExcludePatterns type="string"/>
+                                    <fileIncludePatterns type="string">**/*</fileIncludePatterns>
+                                    <fullVerification type="string">true</fullVerification>
+                                    <label type="string">${p:version.name}</label>
+                                    <repositoryId type="string">${p:component/code_station/repository}</repositoryId>
+                                    <repositoryUrl type="string">${p:server.url}/vfs</repositoryUrl>
+                                    <resId type="string">${p:resource.id}</resId>
+                                    <serverUrl type="string">${p:server.url}</serverUrl>
+                                    <setFileExecuteBits type="string">false</setFileExecuteBits>
+                                    <syncMode type="string">true</syncMode>
+                                    <verifyFileIntegrity type="string">false</verifyFileIntegrity>
+                                </properties>
+                                <showHidden type="boolean">false</showHidden>
+                                <type type="string">plugin</type>
+                                <useImpersonation type="boolean">false</useImpersonation>
+                            </arrayElement>
+                        </children>
+                        <edges class="array">
+                            <arrayElement class="object">
+                                <from type="string">Download Artifacts</from>
+                                <to type="string">809a9b6700320565f5b2aefc6dcc26</to>
+                                <type type="string">SUCCESS</type>
+                                <value type="string"/>
+                            </arrayElement>
+                            <arrayElement class="object">
+                                <to type="string">Download Artifacts</to>
+                                <type type="string">ALWAYS</type>
+                                <value type="string"/>
+                            </arrayElement>
+                        </edges>
+                        <name type="string">d19868c4-d60d-4d05-89d7-fbce800f8956</name>
+                        <offsets class="array">
+                            <arrayElement class="object">
+                                <name type="string">809a9b6700320565f5b2aefc6dcc26</name>
+                                <x type="number">0</x>
+                                <y type="number">420</y>
+                            </arrayElement>
+                            <arrayElement class="object">
+                                <name type="string">Download Artifacts</name>
+                                <x type="number">-46.5</x>
+                                <y type="number">192</y>
+                            </arrayElement>
+                        </offsets>
+                        <sizes class="array">
+                            <arrayElement class="object">
+                                <height type="number">60</height>
+                                <name type="string">Download Artifacts</name>
+                                <width type="number">220</width>
+                            </arrayElement>
+                            <arrayElement class="object">
+                                <height type="number">50</height>
+                                <name type="string">809a9b6700320565f5b2aefc6dcc26</name>
+                                <width type="number">80</width>
+                            </arrayElement>
+                        </sizes>
+                        <type type="string">graph</type>
+                    </rootActivity>
+                    <status type="string">Active</status>
+                    <takesVersion type="boolean">true</takesVersion>
+                </arrayElement>
+                <arrayElement class="object">
+                    <active type="boolean">true</active>
+                    <defaultWorkingDir type="string">${p:resource/work.dir}/${p:component.name}</defaultWorkingDir>
+                    <deleted type="boolean">false</deleted>
+                    <description type="string"/>
+                    <name type="string">oper-without-version</name>
+                    <propDefs class="array"/>
+                    <status type="string"/>
+                    <takesVersion type="boolean">false</takesVersion>
+                </arrayElement>
+            </processes>
+            <propSheetGroup class="object">
+                <propSheets class="array">
+                    <arrayElement class="object">
+                        <name type="string">custom</name>
+                        <properties class="array"/>
+                    </arrayElement>
+                    <arrayElement class="object">
+                        <name type="string">code_station</name>
+                        <properties class="array">
+                            <arrayElement class="object">
+                                <description type="string"/>
+                                <name type="string">repository</name>
+                                <secure type="boolean">false</secure>
+                                <value type="string">67ddae97-d039-4d71-8cbc-4c7d65ae1585</value>
+                            </arrayElement>
+                        </properties>
+                    </arrayElement>
+                    <arrayElement class="object">
+                        <name type="string">FileSystemComponentProperties</name>
+                        <properties class="array">
+                            <arrayElement class="object">
+                                <description type="string"/>
+                                <name type="string">basePath</name>
+                                <secure type="boolean">false</secure>
+                                <value type="string">c:\test</value>
+                            </arrayElement>
+                            <arrayElement class="object">
+                                <description type="string"/>
+                                <name type="string">nextVersionNumber</name>
+                                <secure type="boolean">false</secure>
+                                <value type="string">1</value>
+                            </arrayElement>
+                            <arrayElement class="object">
+                                <description type="string"/>
+                                <name type="string">pollingPeriod</name>
+                                <secure type="boolean">false</secure>
+                            </arrayElement>
+                            <arrayElement class="object">
+                                <description type="string"/>
+                                <name type="string">quietPeriod</name>
+                                <secure type="boolean">false</secure>
+                            </arrayElement>
+                            <arrayElement class="object">
+                                <description type="string"/>
+                                <name type="string">saveFileExecuteBits</name>
+                                <secure type="boolean">false</secure>
+                                <value type="string">false</value>
+                            </arrayElement>
+                            <arrayElement class="object">
+                                <description type="string"/>
+                                <name type="string">useVersionNamePattern</name>
+                                <secure type="boolean">false</secure>
+                                <value type="string">false</value>
+                            </arrayElement>
+                            <arrayElement class="object">
+                                <description type="string"/>
+                                <name type="string">versionNamePattern</name>
+                                <secure type="boolean">false</secure>
+                                <value type="string">${version}</value>
+                            </arrayElement>
+                        </properties>
+                    </arrayElement>
+                    <arrayElement class="object">
+                        <name type="string">template</name>
+                        <properties class="array"/>
+                    </arrayElement>
+                </propSheets>
+            </propSheetGroup>
+            <sourceConfigPluginName type="string">File System (Basic)</sourceConfigPluginName>
+            <taskDefs class="array"/>
+            <useVfs type="boolean">true</useVfs>
+            <versionPropDefs class="array"/>
+        </arrayElement>
+    </components>
+    <enforceCompleteSnapshots type="boolean">false</enforceCompleteSnapshots>
+    <entityType type="string">Application</entityType>
+    <environments class="array">
+        <arrayElement class="object">
+            <active type="boolean">true</active>
+            <cleanupCountToKeep type="number">0</cleanupCountToKeep>
+            <cleanupDaysToKeep type="number">0</cleanupDaysToKeep>
+            <color type="string">#ffffff</color>
+            <componentEnvironmentMappings class="array">
+                <arrayElement class="object">
+                    <componentName type="string">c1</componentName>
+                    <resource type="string">agent-to-local-451-maven</resource>
+                </arrayElement>
+            </componentEnvironmentMappings>
+            <componentPropSheets class="array">
+                <arrayElement class="object">
+                    <componentName type="string">c1</componentName>
+                    <properties class="array"/>
+                </arrayElement>
+            </componentPropSheets>
+            <name type="string">env1</name>
+            <order type="number">0</order>
+            <propSheet class="object">
+                <properties class="array"/>
+            </propSheet>
+            <requireApprovals type="boolean">false</requireApprovals>
+        </arrayElement>
+    </environments>
+    <name type="string">app1</name>
+    <processes class="array">
+        <arrayElement class="object">
+            <description type="string"/>
+            <inventoryManagementType type="string">AUTOMATIC</inventoryManagementType>
+            <name type="string">download</name>
+            <offlineAgentHandling type="string">PRE_EXECUTION_CHECK</offlineAgentHandling>
+            <propDefs class="array"/>
+            <rootActivity class="object">
+                <children class="array">
+                    <arrayElement class="object">
+                        <children class="array"/>
+                        <name type="string">0ee9e0c5d4fbf69139a6d6e16c2845</name>
+                        <type type="string">finish</type>
+                    </arrayElement>
+                    <arrayElement class="object">
+                        <children class="array">
+                            <arrayElement class="object">
+                                <children class="array">
+                                    <arrayElement class="object">
+                                        <allowFailure type="boolean">false</allowFailure>
+                                        <children class="array"/>
+                                        <componentName type="string">c1</componentName>
+                                        <componentProcessName type="string">download</componentProcessName>
+                                        <name type="string">dwnld</name>
+                                        <properties class="object"/>
+                                        <type type="string">componentProcess</type>
+                                    </arrayElement>
+                                </children>
+                                <componentName type="string">c1</componentName>
+                                <name type="string">967bdbb8-8f5b-40bb-96ee-5bc903461c34</name>
+                                <status type="string">Active</status>
+                                <type type="string">inventoryVersionDiff</type>
+                            </arrayElement>
+                        </children>
+                        <componentName type="string">c1</componentName>
+                        <name type="string">82d1a5d6edc34190d7ff245d2834b1</name>
+                        <properties class="array">
+                            <arrayElement class="object">
+                                <name type="string">failFast</name>
+                                <value type="string">false</value>
+                            </arrayElement>
+                            <arrayElement class="object">
+                                <name type="string">runOnlyOnFirst</name>
+                                <value type="string">false</value>
+                            </arrayElement>
+                            <arrayElement class="object">
+                                <name type="string">maxIteration</name>
+                                <value type="string">-1</value>
+                            </arrayElement>
+                        </properties>
+                        <type type="string">componentEnvironmentIterator</type>
+                    </arrayElement>
+                    <arrayElement class="object">
+                        <children class="array">
+                            <arrayElement class="object">
+                                <children class="array">
+                                    <arrayElement class="object">
+                                        <allowFailure type="boolean">false</allowFailure>
+                                        <children class="array"/>
+                                        <componentName type="string">c1</componentName>
+                                        <componentProcessName type="string">oper-without-version</componentProcessName>
+                                        <name type="string">asd</name>
+                                        <properties class="object"/>
+                                        <type type="string">componentProcess</type>
+                                    </arrayElement>
+                                </children>
+                                <componentName type="string">c1</componentName>
+                                <name type="string">7dae64a5-9101-42bc-9726-015ad7a268b8</name>
+                                <type type="string">configurationDiff</type>
+                            </arrayElement>
+                        </children>
+                        <componentName type="string">c1</componentName>
+                        <name type="string">8ca21ea103d9da1f32cd3882c90749</name>
+                        <properties class="array">
+                            <arrayElement class="object">
+                                <name type="string">failFast</name>
+                                <value type="string">false</value>
+                            </arrayElement>
+                            <arrayElement class="object">
+                                <name type="string">runOnlyOnFirst</name>
+                                <value type="string">false</value>
+                            </arrayElement>
+                            <arrayElement class="object">
+                                <name type="string">maxIteration</name>
+                                <value type="string">-1</value>
+                            </arrayElement>
+                        </properties>
+                        <type type="string">componentEnvironmentIterator</type>
+                    </arrayElement>
+                </children>
+                <edges class="array">
+                    <arrayElement class="object">
+                        <from type="string">8ca21ea103d9da1f32cd3882c90749</from>
+                        <to type="string">0ee9e0c5d4fbf69139a6d6e16c2845</to>
+                        <type type="string">SUCCESS</type>
+                        <value type="string"/>
+                    </arrayElement>
+                    <arrayElement class="object">
+                        <to type="string">8ca21ea103d9da1f32cd3882c90749</to>
+                        <type type="string">ALWAYS</type>
+                        <value type="string"/>
+                    </arrayElement>
+                </edges>
+                <name type="string">50f92831-6fdb-4d44-b192-c9dd30bceedd</name>
+                <offsets class="array">
+                    <arrayElement class="object">
+                        <name type="string">82d1a5d6edc34190d7ff245d2834b1</name>
+                        <x type="number">-5.5</x>
+                        <y type="number">233</y>
+                    </arrayElement>
+                    <arrayElement class="object">
+                        <name type="string">8ca21ea103d9da1f32cd3882c90749</name>
+                        <x type="number">-348.5</x>
+                        <y type="number">253</y>
+                    </arrayElement>
+                    <arrayElement class="object">
+                        <name type="string">0ee9e0c5d4fbf69139a6d6e16c2845</name>
+                        <x type="number">0</x>
+                        <y type="number">420</y>
+                    </arrayElement>
+                </offsets>
+                <sizes class="array">
+                    <arrayElement class="object">
+                        <height type="number">60</height>
+                        <name type="string">8ca21ea103d9da1f32cd3882c90749</name>
+                        <width type="number">130</width>
+                    </arrayElement>
+                    <arrayElement class="object">
+                        <height type="number">50</height>
+                        <name type="string">0ee9e0c5d4fbf69139a6d6e16c2845</name>
+                        <width type="number">80</width>
+                    </arrayElement>
+                    <arrayElement class="object">
+                        <height type="number">60</height>
+                        <name type="string">82d1a5d6edc34190d7ff245d2834b1</name>
+                        <width type="number">120</width>
+                    </arrayElement>
+                </sizes>
+                <type type="string">graph</type>
+            </rootActivity>
+        </arrayElement>
+    </processes>
+    <propSheet class="object">
+        <properties class="array"/>
+    </propSheet>
+    <taskDefs class="array"/>
+</application>

@@ -1,0 +1,413 @@
+{
+    "components": [
+        {
+            "active": true,
+            "cleanupCountToKeep": 0,
+            "cleanupDaysToKeep": 0,
+            "configTemplates": [
+                {
+                    "active": true,
+                    "data": "asdasdas\nd\nasd\nas\nd\nasd\nas\nd",
+                    "name": "configuration template"
+                }
+            ],
+            "created": 1.396624848467E12,
+            "defaultVersionType": "FULL",
+            "deleted": false,
+            "entityType": "Component",
+            "envPropDefs": [],
+            "importAutomatically": false,
+            "name": "c1",
+            "processes": [
+                {
+                    "active": true,
+                    "configActionType": "ADD",
+                    "defaultWorkingDir": "${p:resource/work.dir}/${p:component.name}",
+                    "deleted": false,
+                    "description": [],
+                    "name": "deploy config",
+                    "propDefs": [],
+                    "rootActivity": {
+                        "children": [
+                            {
+                                "children": [],
+                                "name": "98e424df5140c0cdb95548e01efc46",
+                                "type": "finish"
+                            }
+                        ],
+                        "edges": [
+                            {
+                                "to": "98e424df5140c0cdb95548e01efc46",
+                                "type": "ALWAYS",
+                                "value": []
+                            }
+                        ],
+                        "name": "04c84ce9-13c0-4fc6-acf9-af64b4ebd647",
+                        "offsets": [
+                            {
+                                "name": "98e424df5140c0cdb95548e01efc46",
+                                "x": 0,
+                                "y": 420
+                            }
+                        ],
+                        "sizes": [
+                            {
+                                "height": 50,
+                                "name": "98e424df5140c0cdb95548e01efc46",
+                                "width": 80
+                            }
+                        ],
+                        "type": "graph"
+                    },
+                    "status": [],
+                    "takesVersion": false
+                },
+                {
+                    "active": true,
+                    "configActionType": "ADD",
+                    "defaultWorkingDir": "${p:resource/work.dir}/${p:component.name}",
+                    "deleted": false,
+                    "description": [],
+                    "inventoryActionType": "ADD",
+                    "name": "download",
+                    "propDefs": [],
+                    "rootActivity": {
+                        "children": [
+                            {
+                                "children": [],
+                                "name": "809a9b6700320565f5b2aefc6dcc26",
+                                "type": "finish"
+                            },
+                            {
+                                "allowFailure": false,
+                                "children": [],
+                                "commandName": "Download Artifacts",
+                                "impersonationUseSsh": false,
+                                "impersonationUseSudo": false,
+                                "name": "Download Artifacts",
+                                "pluginName": "Serena RA Versioned File Storage",
+                                "pluginVersion": 16,
+                                "properties": {
+                                    "compId": "${p:component.id}",
+                                    "directoryOffset": ".",
+                                    "fileExcludePatterns": [],
+                                    "fileIncludePatterns": "**/*",
+                                    "fullVerification": "true",
+                                    "label": "${p:version.name}",
+                                    "repositoryId": "${p:component/code_station/repository}",
+                                    "repositoryUrl": "${p:server.url}/vfs",
+                                    "resId": "${p:resource.id}",
+                                    "serverUrl": "${p:server.url}",
+                                    "setFileExecuteBits": "false",
+                                    "syncMode": "true",
+                                    "verifyFileIntegrity": "false"
+                                },
+                                "showHidden": false,
+                                "type": "plugin",
+                                "useImpersonation": false
+                            }
+                        ],
+                        "edges": [
+                            {
+                                "from": "Download Artifacts",
+                                "to": "809a9b6700320565f5b2aefc6dcc26",
+                                "type": "SUCCESS",
+                                "value": []
+                            },
+                            {
+                                "to": "Download Artifacts",
+                                "type": "ALWAYS",
+                                "value": []
+                            }
+                        ],
+                        "name": "d19868c4-d60d-4d05-89d7-fbce800f8956",
+                        "offsets": [
+                            {
+                                "name": "809a9b6700320565f5b2aefc6dcc26",
+                                "x": 0,
+                                "y": 420
+                            },
+                            {
+                                "name": "Download Artifacts",
+                                "x": -46.5,
+                                "y": 192
+                            }
+                        ],
+                        "sizes": [
+                            {
+                                "height": 60,
+                                "name": "Download Artifacts",
+                                "width": 220
+                            },
+                            {
+                                "height": 50,
+                                "name": "809a9b6700320565f5b2aefc6dcc26",
+                                "width": 80
+                            }
+                        ],
+                        "type": "graph"
+                    },
+                    "status": "Active",
+                    "takesVersion": true
+                },
+                {
+                    "active": true,
+                    "defaultWorkingDir": "${p:resource/work.dir}/${p:component.name}",
+                    "deleted": false,
+                    "description": [],
+                    "name": "oper-without-version",
+                    "propDefs": [],
+                    "status": [],
+                    "takesVersion": false
+                }
+            ],
+            "propSheetGroup": {
+                "propSheets": [
+                    {
+                        "name": "custom",
+                        "properties": []
+                    },
+                    {
+                        "name": "code_station",
+                        "properties": [
+                            {
+                                "description": [],
+                                "name": "repository",
+                                "secure": false,
+                                "value": "67ddae97-d039-4d71-8cbc-4c7d65ae1585"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "FileSystemComponentProperties",
+                        "properties": [
+                            {
+                                "description": [],
+                                "name": "basePath",
+                                "secure": false,
+                                "value": "c:\\test"
+                            },
+                            {
+                                "description": [],
+                                "name": "nextVersionNumber",
+                                "secure": false,
+                                "value": "1"
+                            },
+                            {
+                                "description": [],
+                                "name": "pollingPeriod",
+                                "secure": false
+                            },
+                            {
+                                "description": [],
+                                "name": "quietPeriod",
+                                "secure": false
+                            },
+                            {
+                                "description": [],
+                                "name": "saveFileExecuteBits",
+                                "secure": false,
+                                "value": "false"
+                            },
+                            {
+                                "description": [],
+                                "name": "useVersionNamePattern",
+                                "secure": false,
+                                "value": "false"
+                            },
+                            {
+                                "description": [],
+                                "name": "versionNamePattern",
+                                "secure": false,
+                                "value": "${version}"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "template",
+                        "properties": []
+                    }
+                ]
+            },
+            "sourceConfigPluginName": "File System (Basic)",
+            "taskDefs": [],
+            "useVfs": true,
+            "versionPropDefs": []
+        }
+    ],
+    "enforceCompleteSnapshots": false,
+    "entityType": "Application",
+    "environments": [
+        {
+            "active": true,
+            "cleanupCountToKeep": 0,
+            "cleanupDaysToKeep": 0,
+            "color": "#ffffff",
+            "componentEnvironmentMappings": [
+                {
+                    "componentName": "c1",
+                    "resource": "agent-to-local-451-maven"
+                }
+            ],
+            "componentPropSheets": [
+                {
+                    "componentName": "c1",
+                    "properties": []
+                }
+            ],
+            "name": "env1",
+            "order": 0,
+            "propSheet": {
+                "properties": []
+            },
+            "requireApprovals": false
+        }
+    ],
+    "name": "app1",
+    "processes": [
+        {
+            "description": [],
+            "inventoryManagementType": "AUTOMATIC",
+            "name": "download",
+            "offlineAgentHandling": "PRE_EXECUTION_CHECK",
+            "propDefs": [],
+            "rootActivity": {
+                "children": [
+                    {
+                        "children": [],
+                        "name": "0ee9e0c5d4fbf69139a6d6e16c2845",
+                        "type": "finish"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [
+                                    {
+                                        "allowFailure": false,
+                                        "children": [],
+                                        "componentName": "c1",
+                                        "componentProcessName": "download",
+                                        "name": "dwnld",
+                                        "properties": null,
+                                        "type": "componentProcess"
+                                    }
+                                ],
+                                "componentName": "c1",
+                                "name": "967bdbb8-8f5b-40bb-96ee-5bc903461c34",
+                                "status": "Active",
+                                "type": "inventoryVersionDiff"
+                            }
+                        ],
+                        "componentName": "c1",
+                        "name": "82d1a5d6edc34190d7ff245d2834b1",
+                        "properties": [
+                            {
+                                "name": "failFast",
+                                "value": "false"
+                            },
+                            {
+                                "name": "runOnlyOnFirst",
+                                "value": "false"
+                            },
+                            {
+                                "name": "maxIteration",
+                                "value": "-1"
+                            }
+                        ],
+                        "type": "componentEnvironmentIterator"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [
+                                    {
+                                        "allowFailure": false,
+                                        "children": [],
+                                        "componentName": "c1",
+                                        "componentProcessName": "oper-without-version",
+                                        "name": "asd",
+                                        "properties": null,
+                                        "type": "componentProcess"
+                                    }
+                                ],
+                                "componentName": "c1",
+                                "name": "7dae64a5-9101-42bc-9726-015ad7a268b8",
+                                "type": "configurationDiff"
+                            }
+                        ],
+                        "componentName": "c1",
+                        "name": "8ca21ea103d9da1f32cd3882c90749",
+                        "properties": [
+                            {
+                                "name": "failFast",
+                                "value": "false"
+                            },
+                            {
+                                "name": "runOnlyOnFirst",
+                                "value": "false"
+                            },
+                            {
+                                "name": "maxIteration",
+                                "value": "-1"
+                            }
+                        ],
+                        "type": "componentEnvironmentIterator"
+                    }
+                ],
+                "edges": [
+                    {
+                        "from": "8ca21ea103d9da1f32cd3882c90749",
+                        "to": "0ee9e0c5d4fbf69139a6d6e16c2845",
+                        "type": "SUCCESS",
+                        "value": []
+                    },
+                    {
+                        "to": "8ca21ea103d9da1f32cd3882c90749",
+                        "type": "ALWAYS",
+                        "value": []
+                    }
+                ],
+                "name": "50f92831-6fdb-4d44-b192-c9dd30bceedd",
+                "offsets": [
+                    {
+                        "name": "82d1a5d6edc34190d7ff245d2834b1",
+                        "x": -5.5,
+                        "y": 233
+                    },
+                    {
+                        "name": "8ca21ea103d9da1f32cd3882c90749",
+                        "x": -348.5,
+                        "y": 253
+                    },
+                    {
+                        "name": "0ee9e0c5d4fbf69139a6d6e16c2845",
+                        "x": 0,
+                        "y": 420
+                    }
+                ],
+                "sizes": [
+                    {
+                        "height": 60,
+                        "name": "8ca21ea103d9da1f32cd3882c90749",
+                        "width": 130
+                    },
+                    {
+                        "height": 50,
+                        "name": "0ee9e0c5d4fbf69139a6d6e16c2845",
+                        "width": 80
+                    },
+                    {
+                        "height": 60,
+                        "name": "82d1a5d6edc34190d7ff245d2834b1",
+                        "width": 120
+                    }
+                ],
+                "type": "graph"
+            }
+        }
+    ],
+    "propSheet": {
+        "properties": []
+    },
+    "taskDefs": []
+}

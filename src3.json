@@ -1,0 +1,415 @@
+{ "application":
+{
+    "entityType": "Application",
+    "name": "app1",
+    "enforceCompleteSnapshots": false,
+    "propSheet": {
+        "properties": []
+    },
+    "components": [
+        {
+            "entityType": "Component",
+            "name": "c1",
+            "created": 1396624848467,
+            "importAutomatically": false,
+            "useVfs": true,
+            "active": true,
+            "deleted": false,
+            "defaultVersionType": "FULL",
+            "cleanupDaysToKeep": 0,
+            "cleanupCountToKeep": 0,
+            "sourceConfigPluginName": "File System (Basic)",
+            "envPropDefs": [],
+            "versionPropDefs": [],
+            "propSheetGroup": {
+                "propSheets": [
+                    {
+                        "name": "custom",
+                        "properties": []
+                    },
+                    {
+                        "name": "code_station",
+                        "properties": [
+                            {
+                                "name": "repository",
+                                "value": "67ddae97-d039-4d71-8cbc-4c7d65ae1585",
+                                "description": "",
+                                "secure": false
+                            }
+                        ]
+                    },
+                    {
+                        "name": "FileSystemComponentProperties",
+                        "properties": [
+                            {
+                                "name": "basePath",
+                                "value": "c:\\test",
+                                "description": "",
+                                "secure": false
+                            },
+                            {
+                                "name": "nextVersionNumber",
+                                "value": "1",
+                                "description": "",
+                                "secure": false
+                            },
+                            {
+                                "name": "pollingPeriod",
+                                "description": "",
+                                "secure": false
+                            },
+                            {
+                                "name": "quietPeriod",
+                                "description": "",
+                                "secure": false
+                            },
+                            {
+                                "name": "saveFileExecuteBits",
+                                "value": "false",
+                                "description": "",
+                                "secure": false
+                            },
+                            {
+                                "name": "useVersionNamePattern",
+                                "value": "false",
+                                "description": "",
+                                "secure": false
+                            },
+                            {
+                                "name": "versionNamePattern",
+                                "value": "${version}",
+                                "description": "",
+                                "secure": false
+                            }
+                        ]
+                    },
+                    {
+                        "name": "template",
+                        "properties": []
+                    }
+                ]
+            },
+            "processes": [
+                {
+                    "name": "deploy config",
+                    "description": "",
+                    "defaultWorkingDir": "${p:resource\/work.dir}\/${p:component.name}",
+                    "takesVersion": false,
+                    "status": "",
+                    "configActionType": "ADD",
+                    "active": true,
+                    "deleted": false,
+                    "propDefs": [],
+                    "rootActivity": {
+                        "edges": [
+                            {
+                                "to": "98e424df5140c0cdb95548e01efc46",
+                                "type": "ALWAYS",
+                                "value": ""
+                            }
+                        ],
+                        "offsets": [
+                            {
+                                "name": "98e424df5140c0cdb95548e01efc46",
+                                "x": 0,
+                                "y": 420
+                            }
+                        ],
+                        "sizes": [
+                            {
+                                "name": "98e424df5140c0cdb95548e01efc46",
+                                "width": 80,
+                                "height": 50
+                            }
+                        ],
+                        "type": "graph",
+                        "name": "04c84ce9-13c0-4fc6-acf9-af64b4ebd647",
+                        "children": [
+                            {
+                                "type": "finish",
+                                "name": "98e424df5140c0cdb95548e01efc46",
+                                "children": []
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "download",
+                    "description": "",
+                    "defaultWorkingDir": "${p:resource\/work.dir}\/${p:component.name}",
+                    "takesVersion": true,
+                    "inventoryActionType": "ADD",
+                    "status": "Active",
+                    "configActionType": "ADD",
+                    "active": true,
+                    "deleted": false,
+                    "propDefs": [],
+                    "rootActivity": {
+                        "edges": [
+                            {
+                                "to": "809a9b6700320565f5b2aefc6dcc26",
+                                "from": "Download Artifacts",
+                                "type": "SUCCESS",
+                                "value": ""
+                            },
+                            {
+                                "to": "Download Artifacts",
+                                "type": "ALWAYS",
+                                "value": ""
+                            }
+                        ],
+                        "offsets": [
+                            {
+                                "name": "809a9b6700320565f5b2aefc6dcc26",
+                                "x": 0,
+                                "y": 420
+                            },
+                            {
+                                "name": "Download Artifacts",
+                                "x": -46.5,
+                                "y": 192
+                            }
+                        ],
+                        "sizes": [
+                            {
+                                "name": "Download Artifacts",
+                                "width": 220,
+                                "height": 60
+                            },
+                            {
+                                "name": "809a9b6700320565f5b2aefc6dcc26",
+                                "width": 80,
+                                "height": 50
+                            }
+                        ],
+                        "type": "graph",
+                        "name": "d19868c4-d60d-4d05-89d7-fbce800f8956",
+                        "children": [
+                            {
+                                "type": "finish",
+                                "name": "809a9b6700320565f5b2aefc6dcc26",
+                                "children": []
+                            },
+                            {
+                                "allowFailure": false,
+                                "useImpersonation": false,
+                                "showHidden": false,
+                                "impersonationUseSudo": false,
+                                "impersonationUseSsh": false,
+                                "commandName": "Download Artifacts",
+                                "pluginName": "Serena RA Versioned File Storage",
+                                "pluginVersion": 16,
+                                "properties": {
+                                    "directoryOffset": ".",
+                                    "fileIncludePatterns": "**\/*",
+                                    "fileExcludePatterns": "",
+                                    "syncMode": "true",
+                                    "fullVerification": "true",
+                                    "setFileExecuteBits": "false",
+                                    "verifyFileIntegrity": "false",
+                                    "repositoryUrl": "${p:server.url}\/vfs",
+                                    "repositoryId": "${p:component\/code_station\/repository}",
+                                    "label": "${p:version.name}",
+                                    "serverUrl": "${p:server.url}",
+                                    "compId": "${p:component.id}",
+                                    "resId": "${p:resource.id}"
+                                },
+                                "type": "plugin",
+                                "name": "Download Artifacts",
+                                "children": []
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "oper-without-version",
+                    "description": "",
+                    "defaultWorkingDir": "${p:resource\/work.dir}\/${p:component.name}",
+                    "takesVersion": false,
+                    "status": "",
+                    "active": true,
+                    "deleted": false,
+                    "propDefs": []
+                }
+            ],
+            "taskDefs": [],
+            "configTemplates": [
+                {
+                    "name": "configuration template",
+                    "active": true,
+                    "data": "asdasdas\nd\nasd\nas\nd\nasd\nas\nd"
+                }
+            ]
+        }
+    ],
+    "environments": [
+        {
+            "name": "env1",
+            "color": "#ffffff",
+            "requireApprovals": false,
+            "cleanupDaysToKeep": 0,
+            "cleanupCountToKeep": 0,
+            "order": 0,
+            "active": true,
+            "propSheet": {
+                "properties": []
+            },
+            "componentEnvironmentMappings": [
+                {
+                    "componentName": "c1",
+                    "resource": "agent-to-local-451-maven"
+                }
+            ],
+            "componentPropSheets": [
+                {
+                    "properties": [],
+                    "componentName": "c1"
+                }
+            ]
+        }
+    ],
+    "processes": [
+        {
+            "name": "download",
+            "description": "",
+            "inventoryManagementType": "AUTOMATIC",
+            "offlineAgentHandling": "PRE_EXECUTION_CHECK",
+            "rootActivity": {
+                "edges": [
+                    {
+                        "to": "0ee9e0c5d4fbf69139a6d6e16c2845",
+                        "from": "8ca21ea103d9da1f32cd3882c90749",
+                        "type": "SUCCESS",
+                        "value": ""
+                    },
+                    {
+                        "to": "8ca21ea103d9da1f32cd3882c90749",
+                        "type": "ALWAYS",
+                        "value": ""
+                    }
+                ],
+                "offsets": [
+                    {
+                        "name": "82d1a5d6edc34190d7ff245d2834b1",
+                        "x": -5.5,
+                        "y": 233
+                    },
+                    {
+                        "name": "8ca21ea103d9da1f32cd3882c90749",
+                        "x": -348.5,
+                        "y": 253
+                    },
+                    {
+                        "name": "0ee9e0c5d4fbf69139a6d6e16c2845",
+                        "x": 0,
+                        "y": 420
+                    }
+                ],
+                "sizes": [
+                    {
+                        "name": "8ca21ea103d9da1f32cd3882c90749",
+                        "width": 130,
+                        "height": 60
+                    },
+                    {
+                        "name": "0ee9e0c5d4fbf69139a6d6e16c2845",
+                        "width": 80,
+                        "height": 50
+                    },
+                    {
+                        "name": "82d1a5d6edc34190d7ff245d2834b1",
+                        "width": 120,
+                        "height": 60
+                    }
+                ],
+                "type": "graph",
+                "name": "50f92831-6fdb-4d44-b192-c9dd30bceedd",
+                "children": [
+                    {
+                        "type": "finish",
+                        "name": "0ee9e0c5d4fbf69139a6d6e16c2845",
+                        "children": []
+                    },
+                    {
+                        "componentName": "c1",
+                        "properties": [
+                            {
+                                "name": "failFast",
+                                "value": "false"
+                            },
+                            {
+                                "name": "runOnlyOnFirst",
+                                "value": "false"
+                            },
+                            {
+                                "name": "maxIteration",
+                                "value": "-1"
+                            }
+                        ],
+                        "type": "componentEnvironmentIterator",
+                        "name": "82d1a5d6edc34190d7ff245d2834b1",
+                        "children": [
+                            {
+                                "componentName": "c1",
+                                "status": "Active",
+                                "type": "inventoryVersionDiff",
+                                "name": "967bdbb8-8f5b-40bb-96ee-5bc903461c34",
+                                "children": [
+                                    {
+                                        "componentName": "c1",
+                                        "componentProcessName": "download",
+                                        "allowFailure": false,
+                                        "properties": {},
+                                        "type": "componentProcess",
+                                        "name": "dwnld",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "componentName": "c1",
+                        "properties": [
+                            {
+                                "name": "failFast",
+                                "value": "false"
+                            },
+                            {
+                                "name": "runOnlyOnFirst",
+                                "value": "false"
+                            },
+                            {
+                                "name": "maxIteration",
+                                "value": "-1"
+                            }
+                        ],
+                        "type": "componentEnvironmentIterator",
+                        "name": "8ca21ea103d9da1f32cd3882c90749",
+                        "children": [
+                            {
+                                "componentName": "c1",
+                                "type": "configurationDiff",
+                                "name": "7dae64a5-9101-42bc-9726-015ad7a268b8",
+                                "children": [
+                                    {
+                                        "componentName": "c1",
+                                        "componentProcessName": "oper-without-version",
+                                        "allowFailure": false,
+                                        "properties": {},
+                                        "type": "componentProcess",
+                                        "name": "asd",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "propDefs": []
+        }
+    ],
+    "taskDefs": []
+}
+}
